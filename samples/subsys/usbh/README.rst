@@ -1,18 +1,18 @@
 .. usb-host-sample:
 
-USBH Host Sample
-###########
+USB Host Sample
+###############
 
 Overview
 ********
 
-A simple sample to use an usb host controller to write and read a block
-on a mass storage device
+A simple sample to use an USB host controller to write and read a block
+on a mass storage device.
 
 Requirements
-********************
+************
 
-This sample has been tested with with the atsamr21_xpro and an usb hub with
+This sample has been tested with with the atsamr21_xpro and an USB hub with
 it's own power supply
 
 Building and Running
@@ -21,7 +21,7 @@ Building and Running
 This sample can be found under
 :zephyr_file:`samples/subsys/usbh
 
-The following commands build and flash the usbh sample.
+The following commands build and flash the USB host sample.
 
 .. zephyr-app-commands::
         :zephyr-app: samples/subsys/usbh
