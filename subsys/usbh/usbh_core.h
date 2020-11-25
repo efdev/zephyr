@@ -1,9 +1,20 @@
 /*
- * Copyright 2004-2020 Silicon Laboratories Inc. www.silabs.com
- *
  * Copyright (c) 2020 PHYTEC Messtechnik GmbH
  *
- * SPDX-License-Identifier: APACHE-2.0
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * This file is based on usbh_core.h from uC/Modbus Stack.
+ *
+ *                                uC/Modbus
+ *                         The Embedded USB Host Stack
+ *
+ *      Copyright 2003-2020 Silicon Laboratories Inc. www.silabs.com
+ *
+ *                   SPDX-License-Identifier: APACHE-2.0
+ *
+ * This software is subject to an open source license and is distributed by
+ *  Silicon Laboratories Inc. pursuant to the terms of the Apache License,
+ *      Version 2.0 available at www.apache.org/licenses/LICENSE-2.0.
  */
 
 #ifndef ZEPHYR_USBH_CORE_

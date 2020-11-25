@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2020 PHYTEC Messtechnik GmbH
+ *
  * SPDX-License-Identifier: Apache-2.0
  */
 

@@ -1,16 +1,28 @@
 /*
- * Copyright 2004-2020 Silicon Laboratories Inc. www.silabs.com
- *
  * Copyright (c) 2020 PHYTEC Messtechnik GmbH
  *
- * SPDX-License-Identifier: APACHE-2.0
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * This file is based on usbh_msc.c from uC/Modbus Stack.
+ *
+ *                                uC/Modbus
+ *                         The Embedded USB Host Stack
+ *
+ *      Copyright 2003-2020 Silicon Laboratories Inc. www.silabs.com
+ *
+ *                   SPDX-License-Identifier: APACHE-2.0
+ *
+ * This software is subject to an open source license and is distributed by
+ *  Silicon Laboratories Inc. pursuant to the terms of the Apache License,
+ *      Version 2.0 available at www.apache.org/licenses/LICENSE-2.0.
  */
 
 #include <usbh_msc.h>
 #include <usbh_core.h>
 #include <sys/byteorder.h>
+
 #include <logging/log.h>
-LOG_MODULE_REGISTER(msc);
+LOG_MODULE_REGISTER(usbh_msc, CONFIG_USBH_LOG_LEVEL);
 
 #define USBH_MSC_SIG_CBW 0x43425355u
 #define USBH_MSC_SIG_CSW 0x53425355u
@@ -928,7 +940,6 @@ int usbh_msc_ref_rel(struct usbh_msc_dev *p_msc_dev)
 uint32_t usbh_msc_read(struct usbh_msc_dev *p_msc_dev, uint8_t lun,
 		       uint32_t blk_addr, uint16_t nbr_blks, uint32_t blk_size,
 		       void *p_arg, int *p_err)
-
 {
 	uint32_t xfer_len;
 
@@ -962,7 +973,6 @@ uint32_t usbh_msc_read(struct usbh_msc_dev *p_msc_dev, uint8_t lun,
 uint32_t usbh_msc_write(struct usbh_msc_dev *p_msc_dev, uint8_t lun,
 			uint32_t blk_addr, uint16_t nbr_blks, uint32_t blk_size,
 			const void *p_arg, int *p_err)
-
 {
 	uint32_t xfer_len;
 
@@ -1378,7 +1388,6 @@ static int usbh_msc_tx_data(struct usbh_msc_dev *p_msc_dev, void *p_arg,
  */
 static int usbh_msc_rx_data(struct usbh_msc_dev *p_msc_dev, void *p_arg,
 			    uint32_t data_len)
-
 {
 	int err;
 	bool retry;

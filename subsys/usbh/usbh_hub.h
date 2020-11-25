@@ -1,9 +1,7 @@
 /*
- * Copyright 2004-2020 Silicon Laboratories Inc. www.silabs.com
- *
  * Copyright (c) 2020 PHYTEC Messtechnik GmbH
  *
- * SPDX-License-Identifier: APACHE-2.0
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 #ifndef ZEPHYR_USBH_HUB_CLASS_

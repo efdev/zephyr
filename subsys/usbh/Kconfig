@@ -1,11 +1,20 @@
 # Copyright (c) 2020 PHYTEC Messtechnik GmbH
 # SPDX-License-Identifier: Apache-2.0
 
-config USBH
-	bool "USB Host support"
+menuconfig USBH
+	bool "USB Host Support"
+	help
+	  Enable USB host support.
 
-config UC_USBH_MSC
-	bool "USB MSC Class Support"
+if USBH
 
-config UC_USBH_CDC
-	bool "USB MSC Class Support"
+module = USBH
+module-str = usbh
+source "subsys/logging/Kconfig.template.log_config"
+
+config USBH_MSC
+	bool "USB Host Mass Storage Class Support"
+	help
+	  Enable USB Host Mass Storage Class Support.
+
+endif # USBH
